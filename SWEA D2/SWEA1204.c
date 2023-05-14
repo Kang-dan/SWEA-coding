@@ -22,6 +22,7 @@
 int main(){
     int T, N, i, j, num;
 
+    scanf("%d", &T);
     for(i=1; i<=T; i++){
         scanf("%d", &N);
         int score[101] = {0};//0점~100점

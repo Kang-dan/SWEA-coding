@@ -101,3 +101,73 @@ int main(){
     }
     return 0;
 }
+
+//EXPYH님 코드
+/*
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main(int argc, const char * argv[]) {
+    // insert code here...
+   
+ 
+     
+    int numbCase;
+    scanf("%d",&numbCase);
+     
+    for (int problem = 0; problem < numbCase; problem++){
+        int length;
+        int snail[10][10] = {0} ;
+        scanf("%d", &length);
+         
+        int colStart = 0;
+        int colEnd = length-1;
+        int rowStart = 0;
+        int rowEnd = length-1;
+        //printf("%d %d %d %d", colStart, colEnd, rowStart, rowEnd);
+        
+        int theNumber = 1;
+        while (theNumber < length*length) {
+             
+            for (int i = colStart; i <= colEnd; i++){
+                snail[rowStart][i] = theNumber++;
+            }
+            rowStart ++;
+             
+            for (int i = rowStart ; i <= rowEnd ; i++){
+                snail[i][colEnd] = theNumber++;
+            }
+            colEnd--;
+             
+            for (int i = colEnd ; i >= colStart  ; i--){
+                snail[rowEnd][i] = theNumber++;
+            }
+            rowEnd --;
+             
+            for (int i = rowEnd; i >= rowStart ; i--){
+                snail[i][colStart] = theNumber++;
+            }
+ 
+            colStart++;
+             
+            if (theNumber == length*length){
+                snail[length/2][length/2] = theNumber;
+            }
+        }
+             
+        if (theNumber == 1){
+            snail[0][0] = 1;
+        }
+         
+        printf("#%d\n", problem+1);
+            for (int i = 0; i < length ; i++){
+                for (int j =0; j<length; j++){
+                    printf("%d ", snail[i][j]);
+                }
+                printf("\n");
+            }
+        }
+    return 0;
+ 
+}
+*/
