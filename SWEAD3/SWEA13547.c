@@ -36,7 +36,6 @@ int main(void){
     return 0;
 }
 
-
 // jin1214님 코드
 /*
 #include <stdbool.h>
