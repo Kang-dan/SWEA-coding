@@ -37,7 +37,7 @@ int main(){
     return 0;
 }
 
-//다른코드. 숫자나누기로 구현.
+//다른코드. 숫자나누기로 구현
 #include<stdio.h>
  
 int main()
